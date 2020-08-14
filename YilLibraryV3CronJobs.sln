@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackGroudService", "BackGroudService\BackGroudService.csproj", "{369E1042-9E11-4B93-ACDA-CD07CD8F68B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{0198E359-9D5C-4FDD-8052-A53B305F9EA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{369E1042-9E11-4B93-ACDA-CD07CD8F68B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369E1042-9E11-4B93-ACDA-CD07CD8F68B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369E1042-9E11-4B93-ACDA-CD07CD8F68B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369E1042-9E11-4B93-ACDA-CD07CD8F68B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0198E359-9D5C-4FDD-8052-A53B305F9EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0198E359-9D5C-4FDD-8052-A53B305F9EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0198E359-9D5C-4FDD-8052-A53B305F9EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0198E359-9D5C-4FDD-8052-A53B305F9EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63696A68-8500-4A2E-AFE0-171EF0A1F61E}
+	EndGlobalSection
+EndGlobal
