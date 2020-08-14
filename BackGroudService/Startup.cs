@@ -67,6 +67,7 @@ namespace BackGroudService
 				jAppSettings = JToken.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json")));
 
 			DefaultValues.Defaults.WebApiUrl = jAppSettings["Urls"].SelectToken("WebApiUrl").ToString();
+
 		}
 	}
 }
