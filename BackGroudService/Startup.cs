@@ -66,7 +66,10 @@ namespace BackGroudService
 			else
 				jAppSettings = JToken.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json")));
 
+			Core.Utilities.DefaultValues.DefaultValue.SystemTimeZoneName = jAppSettings["DefaultValues"].SelectToken("SystemTimeZoneName").ToString();
 			DefaultValues.Defaults.WebApiUrl = jAppSettings["Urls"].SelectToken("WebApiUrl").ToString();
+
+
 
 		}
 	}

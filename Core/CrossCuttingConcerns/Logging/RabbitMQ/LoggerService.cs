@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.RabitMQ;
+using Core.Utilities.DefaultValues;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -53,7 +54,7 @@ namespace Core.CrossCuttingConcerns.Logging.RabbitMQ
 
 		private static string mesajiCustimizeEt(string level, object mesaj)
 		{
-			string str = string.Format("{0} - {1} - {2}", level, System.DateTime.Now, mesaj);
+			string str = string.Format("{0} - {1} - {2}", level, DefaultValue.Today, mesaj);
 			return str;
 		}
 	}

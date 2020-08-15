@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Core.Extensions;
 using System.Linq;
+using Core.Utilities.DefaultValues;
 
 namespace Core.Utilities.Security.Jwt
 {
@@ -23,7 +24,7 @@ namespace Core.Utilities.Security.Jwt
 		DateTime _accessTokenExpration;
 		public AccessToken CreateToken(User user, List<OperationClaim> operationClaims)
 		{
-			_accessTokenExpration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
+			_accessTokenExpration = DefaultValue.Today.AddMinutes(_tokenOptions.AccessTokenExpiration);
 			var securityKey = Encription.SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
 			var signingCreatentials = Encription.SigningCredentialsHelper.CreateSigningCredentials(securityKey);
 			var jwt = CreateJwtSecurityToken(_tokenOptions, user, signingCreatentials, operationClaims);
@@ -41,7 +42,7 @@ namespace Core.Utilities.Security.Jwt
 				issuer: tokenOptions.Issuer,
 				audience: tokenOptions.Audience,
 				expires: _accessTokenExpration,
-				notBefore: DateTime.Now,
+				notBefore: DefaultValue.Today,
 				claims: SetClaims(user, operationClaims),
 				signingCredentials: signingCredentials
 			);

@@ -7,6 +7,6 @@ namespace BackGroudService.DefaultValues
 {
     public class Defaults
     {
-        public static string WebApiUrl="http://localhost/WebApi/";
+        public static string WebApiUrl="https://localhost:5001/";
     }
 }

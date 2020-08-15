@@ -7,7 +7,16 @@ namespace Core.Utilities.DefaultValues
 	public static class DefaultValue
 	{
 		public static DateTime Today{
-			get { return TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById(SystemTimeZoneName)); } //FindSystemTimeZoneById("Russian Standard Time")); }
+			get {
+				try
+				{
+					return TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById(SystemTimeZoneName));
+				}catch(Exception exc)
+                {
+					return DateTime.Now;
+                }
+			
+			} //FindSystemTimeZoneById("Russian Standard Time")); }
 		}
 		public static string DefaultCreaterUser = "DefaultCreaterUser";
 		
